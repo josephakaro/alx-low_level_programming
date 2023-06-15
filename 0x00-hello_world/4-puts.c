@@ -1,13 +1,16 @@
 #include <stdio.h>
 
-/*
- *This program prints a string using puts function.
+/**
+ * main -Entry point
+ *
+ * Description: 'Prints out a line of string with puts function'
+ *
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-/*Assigned variable of type string*/
-	char str[] = "\"Programming is like building a multilingual puzzle\n";
+	char str[52] = "\"Programming is like building a multilingual puzzle\n";
 		puts(str);
 
 	return (0);
