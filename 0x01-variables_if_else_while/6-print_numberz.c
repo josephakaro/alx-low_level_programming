@@ -13,10 +13,12 @@
 
 int main(void)
 {
-	for (int v = 0; v <= 9; v++)
+	int j = 0;
+	while (j <= 9)
 	{
-		putchar('0' + v);
-	};
+		putchar('0' + j);
+		j++;
+	}
 	putchar('\n');
 	return (0);
 }
