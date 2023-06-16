@@ -1,12 +1,13 @@
 #include <stdio.h>
-/**
- * main - A program prints a quote and runs without error.
- *
- * Return: 1 (success)
- */
+#include <stdlib.h>
 
+/**
+ * main - Entry point
+ * Return: Always 1 (Success)
+ */
 int main(void)
 {
-	putF(STDOUT_FILENO, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
-	return(1);
+	write(STDOUT_FILENO, "and that piece of art is useful
+			\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
