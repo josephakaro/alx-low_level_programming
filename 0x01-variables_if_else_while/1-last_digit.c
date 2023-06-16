@@ -14,7 +14,7 @@ int main(void)
 	char *l, *i, *g, *eq, *lst;
 
 	l = "Last digit of";
-	i = " is ";
+	i = "is";
 	g = "and is greater than 5";
 	eq = "and is 0";
 	lst = "and is less than 6 and not 0";
