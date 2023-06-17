@@ -1,13 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
- * Return: Always 1 (Success)
+ *
+ * Description: Writes a quotes into the console
+ *
+ * Return: Always 1 (success)
  */
 int main(void)
 {
-	write(STDOUT_FILENO, "and that piece of art is useful
-			\" - Dora Korpar, 2015-10-19\n", 59);
+	char qt[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, qt, sizeof(qt));
 	return (1);
 }
