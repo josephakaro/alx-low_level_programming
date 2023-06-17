@@ -9,17 +9,14 @@
  */
 int main(void)
 {
-	int i, j;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
+	while(i <= 9)
 	{
-		for (j = 0; j < 10; j++)
-		{
-			int k = i * 10 + j;
-
-			putchar(k % 10 + '0');
-			putchar(',');
-		}
+		putchar(' ');
+		putchar('0' + i);
+		putchar(',');
+		i++;
 	}
 	putchar('\n');
 	return (0);
