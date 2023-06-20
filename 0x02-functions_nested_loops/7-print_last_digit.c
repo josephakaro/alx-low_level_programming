@@ -3,7 +3,7 @@
 /**
  * print_last_digit - Entry point
  *
- * @int: target int
+ * @n: target int
  *
  * Return: Always 0 (success)
  */
