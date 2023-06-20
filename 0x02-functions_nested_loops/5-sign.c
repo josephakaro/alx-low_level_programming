@@ -3,7 +3,7 @@
 /**
  * print_sign - Entry point
  *
- * Description: prints - and + when n less or greater 
+ * Description: prints - and + when n less or greater
  *
  * @n: parameter checks
  *
@@ -12,7 +12,7 @@
 
 int print_sign(int n)
 {
-	if(n > 0)
+	if (n > 0)
 	{
 		_putchar(43);
 		return (1);
