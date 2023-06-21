@@ -3,13 +3,13 @@
 /**
  * add - sums to integers then prints the results
  *
- * @x: first value
- * @y: Second Value
+ * @a: first value
+ * @b: Second Value
  *
- * Return: sum of x and y
+ * Return: sum of a and b
  */
 
-int add(int x, y);
+int add(int a, b);
 {
-	return (x + y);
+	return (a + a);
 }
