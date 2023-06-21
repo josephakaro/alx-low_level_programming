@@ -22,10 +22,10 @@ void jack_bauer(void)
 			int f = t % 10;
 
 			_putchar(k + '0');
-			_putchar(l+ '0');
+			_putchar(l + '0');
 			_putchar(':');
 			_putchar(o + '0');
-			_putchar(f+ '0');
+			_putchar(f + '0');
 			_putchar('\n');
 			t++;
 		}
