@@ -3,7 +3,7 @@
 /**
  * positive_or_negative - validates number n
  *
- * @n: target number.
+ * @i: target number.
  *
  * Return: 1 and 0 otherwise
  */
