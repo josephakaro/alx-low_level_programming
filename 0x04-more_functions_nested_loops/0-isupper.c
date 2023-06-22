@@ -18,14 +18,10 @@ int _isupper(int c)
 		{
 			if (c >= 65 &&  c <= 90)
 			{	
-				_putchar(65);
-				_putchar(58);
 				return (1);
 			}
 			else if (c >= 97 && c <= 122)
 			{
-				_putchar(97);
-				_putchar(58);
 				return (0);
 			}
 			c++;
