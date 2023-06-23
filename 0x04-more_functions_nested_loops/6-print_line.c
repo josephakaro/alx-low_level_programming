@@ -18,6 +18,7 @@ void print_line(int n)
 	else
 	{
 		int j;
+
 		j = 0;
 
 		while (j < n)
