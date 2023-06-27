@@ -8,7 +8,7 @@
  * Return: Always 0 (success)
  */
 
-void print_rev(char *s);
+void print_rev(char *s)
 {
 	int r;
 
