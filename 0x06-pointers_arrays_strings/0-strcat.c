@@ -11,16 +11,23 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i, destLen;
-	
-	dastLen = strlen(dast);
+	int i, d;
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (i = 0; dast[i] != '\0'; i++)
 	{
-		dast[dastLen + i] = src[i];
+		d = 0;
+
+		while (src[d] != '\0')
+		{
+			
+			dast[i] = src[d];
+			i++;
+			d++;
+
+		}
 	}
 
-	dast[dastLen + i] = '\0';
+	dast[i] = '\0';
 
 	return (dast);
 }
