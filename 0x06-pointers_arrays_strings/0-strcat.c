@@ -13,8 +13,11 @@ char *_strcat(char *dest, char *src)
 {
 	int i, d;
 
-	for (i = 0; dast[i] != '\0'; i++)
-	{
+	i = 0;
+
+	for (dast[i] != '\0')
+		i++;
+
 		d = 0;
 
 		while (src[d] != '\0')
@@ -23,9 +26,7 @@ char *_strcat(char *dest, char *src)
 			dast[i] = src[d];
 			i++;
 			d++;
-
 		}
-	}
 
 	dast[i] = '\0';
 
