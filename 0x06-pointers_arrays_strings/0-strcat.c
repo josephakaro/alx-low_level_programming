@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strcat - This function appends the src string to the dest string...
+ * *_strcat - This function appends the src string to the dest string...
  *
  * @src: string to be appended.
- * @dast: string to get appended to.
+ * @dest: string to get appended to.
  *
- * Return: dast
+ * Return: dest
  */
 
 char *_strcat(char *dest, char *src)
@@ -15,20 +15,17 @@ char *_strcat(char *dest, char *src)
 
 	i = 0;
 
-	for (dast[i] != '\0')
+	while (dest[i] != '\0')
 		i++;
 
-		d = 0;
-
-		while (src[d] != '\0')
+		for (d = 0; src[d] != '\0'; d++)
 		{
-			
-			dast[i] = src[d];
+
+			dest[i] = src[d];
 			i++;
-			d++;
 		}
 
-	dast[i] = '\0';
+	dest[i] = '\0';
 
-	return (dast);
+	return (dest);
 }
