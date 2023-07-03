@@ -1,0 +1,26 @@
+#include "main.h"
+
+/**
+ * _memcpy - coppies n type from memory area src to dest
+ *
+ * @n: type to be coppied
+ * @src: src memory area
+ * @dest: dest memory area
+ *
+ * Return: dest as new memory area
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	int i;
+
+	i = 0;
+	
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+
+	return (dest);
+}
