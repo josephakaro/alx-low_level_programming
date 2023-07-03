@@ -7,7 +7,7 @@
  * @s: string to search
  * @accept: stringcontaining the bytes to look for
  *
- * Return: pointer to the byte in s that matches one of the bytes in accept or NULL
+ * Return: NULL otherwise
  */
 char *_strpbrk(char *s, char *accept)
 {
