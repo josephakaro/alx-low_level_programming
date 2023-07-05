@@ -15,11 +15,11 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (sqrt_recursion(n, 0));
+	return (calc_sqrt_recursion(n, 0));
 }
 
 /**
- * sqrt_recursion - recurse to find natural number of n
+ * calc_sqrt_recursion - recurse to find natural number of n
  *
  * @n: nth number
  * @i: number of iteration
@@ -27,11 +27,11 @@ int _sqrt_recursion(int n)
  * Return the square root
  */
 
-int sqrt_recursion(int n, int i)
+int calc_sqrt_recursion(int n, int i)
 {
 	if (i * i > n)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (sqrt_recursion(n, i + 1));
+	return (calc_sqrt_recursion(n, i + 1));
 }
