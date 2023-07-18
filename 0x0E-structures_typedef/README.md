@@ -1,0 +1,1 @@
+Structre and typeof
