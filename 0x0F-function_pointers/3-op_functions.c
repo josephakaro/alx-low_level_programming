@@ -19,7 +19,7 @@ int op_add(int a, int b)
  *
  * @a: first integer
  * @b: second integer
- * 
+ *
  * Return: difference of a and b
  */
 
