@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	{
 		while (format[i])
 		{
-			while (format[i])
+			switch (format[i])
 			{
 				case 'c':
 					printf("%s%c", gap, va_arg(lst, int));
