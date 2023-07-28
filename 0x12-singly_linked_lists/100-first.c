@@ -8,6 +8,8 @@ void first(void) __attribute__ ((constructor));
  */
 void first(void)
 {
-	static char *str = "You're beat! and yet, you must allow,\nI bore my house upon my back!\n";
-	printf("%s", str);
+	static char *str = "You're beat! and yet, you must allow,\n";
+	static char *str1 = "I bore my house upon my back!\n";
+
+	printf("%s %s", str, str1);
 }
