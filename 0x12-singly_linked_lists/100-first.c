@@ -11,5 +11,6 @@ void first(void)
 	static char *str = "You're beat! and yet, you must allow,\n";
 	static char *str1 = "I bore my house upon my back!\n";
 
-	printf("%s %s", str, str1);
+	printf("%s", str);
+	printf("%s", str1);
 }
