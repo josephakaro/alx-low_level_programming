@@ -12,9 +12,8 @@
 size_t print_list(const list_t *h)
 {
 	size_t nod = 0;
-	const list_t *node;
-
-	for (node = h; node; node = node->next)
+	
+	while(h)node = h; node; node = node->next)
 	{
 		if (!node->str)
 			printf("[0] (nil)\n");
