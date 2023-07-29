@@ -9,12 +9,19 @@
  */
 int main(void)
 {
-	int j = 0;
+	int j = '0';
 
-	do {
-		putchar(",");
-		putchar(' ');
-	} while (j < 9);
+	while (j <= '9')
+	{
+		putchar(j);
+		while (j != '9')
+		{
+			putchar(',');
+			putchar(' ');
+			break;
+		}
+		j++;
+	}
 	putchar('\n');
 	return (0);
 }
