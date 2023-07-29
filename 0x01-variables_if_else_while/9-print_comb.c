@@ -16,5 +16,5 @@ int main(void)
 		putchar(' ');
 	} while (j < 9);
 	putchar('\n');
-	return (o);
+	return (0);
 }
