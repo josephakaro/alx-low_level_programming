@@ -12,11 +12,9 @@ int main(void)
 {
 	int i, j;
 
-    i = 0;
-
-	while(i <= 98)
+	for (i = 0; i <= 98; i++)
 	{
-		for(j = i; j <= 99; j++)
+		for(j = i; j <= 98; j++)
 		{
 			putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
@@ -24,15 +22,13 @@ int main(void)
 			putchar((j / 10) + '0');
 			putchar((j % 10) + '0');
 
-			if (i == 98 && j == 99)
+			if (i == 98 && j == 98)
 				continue;
 
 			putchar(',');
 			putchar(' ');
 		}
-        i++;
 	}
-
 	putchar('\n');
 	return (0);
 }
