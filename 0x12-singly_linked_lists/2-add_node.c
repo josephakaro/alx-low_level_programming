@@ -2,10 +2,10 @@
 
 /**
  * add_node - adds a new node at the beginning.
- * 
+ *
  * @head: head
  * @str: string
- * 
+ *
  * Return: New Address, Null otherwise.
  */
 
