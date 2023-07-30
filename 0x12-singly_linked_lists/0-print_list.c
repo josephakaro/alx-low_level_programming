@@ -11,13 +11,17 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t i = 0;
-	const list_t *n = h;
+size_t n = 0;
 
-	while (n != NULL)
+	while (h)
 	{
-		printf("[%zu] %s\n", i++, n->str);
-		n = n->next;
+		if (!h->str)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
+		h = h->next;
+		n++;
 	}
-	return (i);
+
+	return (n);
 }
