@@ -11,15 +11,17 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t nod = 0;
+	size_t nod;
+	nod = 0;
 
-	for (; h != NULL; nod++)
+	while(h != NULL)
 	{
 		if (!h->str == NULL)
 			printf("[0] (nil)\n");
 		else
 			printf("[%u] %s\n", node->len, node->str);
 		h = h->next;
+		nod++;
 	}
 
 	return (nod);
