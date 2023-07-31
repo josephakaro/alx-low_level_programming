@@ -19,5 +19,7 @@ size_t print_listint(const listint_t *h)
 
 		nod = nod + 1;
 	}
+
 	return (nod);
+
 }
