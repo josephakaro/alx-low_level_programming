@@ -7,6 +7,7 @@
  *
  * Return: Series of nodes.
  */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t nod = 0;
@@ -15,7 +16,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
-        
+
 		nod = nod + 1;
 	}
 	return (nod);
