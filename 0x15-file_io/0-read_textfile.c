@@ -2,16 +2,16 @@
 
 /**
  * read_textfile - reads a text file and prints it to the POSIX
- * 
+ *
  * @filename: Holds the given file name.
  * @letters: text inside the files.
- * 
+ *
  * Return: Number it could be read and printed.
 */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int file;
+	int file;
 	ssize_t byte_read, byte_written;
 	char *buffer;
 
