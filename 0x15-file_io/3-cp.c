@@ -1,30 +1,31 @@
 #include "main.h"
-
 /**
  * checkfile - checks for readability of a file.
  *
- * @file_dir: File location.
- * @file_dest: File destination.
+ * @file_from: File location.
+ * @file_to: File destination.
  * @argv: Number of arrary argument.
  *
  * Return: Void.
  */
-
-void checkfile(int file_dir, int file_dest, char *argv[])
+void checkfile(int file_from, int file_to, char *argv[])
 {
-	if (file_dir == -1)
+	while (file_from && file_to)
 	{
-		dprintf(STDERR_FILENO, "Error: file %s is not readable\n", argv[1]);
-		exit(98);
-	}
-	if (file_dest == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: file %s is not writable", argv[2]);
-		exit(99);
+		if (file_from == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: file %s is not readable\n", argv[1]);
+			exit(98);
+		}
+
+		if (file_to == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: file %s is not writable", argv[2]);
+			exit(99);
+		}
 	}
 
 }
-
 /**
  * main - File Checker.
  *
@@ -33,46 +34,46 @@ void checkfile(int file_dir, int file_dest, char *argv[])
  *
  * Return: Always 0 (success).
  */
-
 int main(int argc, char *argv[])
 {
-	int file_dir, file_dest;
+	int file_from, file_to;
 	int end_error;
 	char buffer[1024];
 
 	ssize_t count, byte_written;
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "%s", "Usage: cp file_directory file_destination");
+	{
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
-
-	file_dir = open(argv[1], O_RDONLY);
-	file_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	checkfile(file_dir, file_dest, argv);
+	}
+	file_from = open(argv[1], O_RDONLY);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	checkfile(file_from, file_to, argv);
 
 	count = 1024;
 
 	while (count)
 	{
-		count = read(file_dir, buffer, 1024);
-
+		count = read(file_from, buffer, 1024);
 		if (count == -1)
 			checkfile(-1, 0, argv);
-		byte_written = write(file_dir, buffer, count);
+		byte_written = write(file_to, buffer, count);
 
 		if (byte_written == -1)
 			checkfile(0, -1, argv);
-
 	}
-
-
-	end_error = close(file_dest);
+	end_error = close(file_from);
 	if (end_error == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: File %d can't be closed\n");
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_from);
 		exit(100);
 	}
-
+	end_error = close(file_to);
+	if (end_error == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't be close file %d\n", file_from);
+		exit(100);
+	}
 	return (0);
-
 }
