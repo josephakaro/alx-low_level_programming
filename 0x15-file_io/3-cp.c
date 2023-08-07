@@ -52,15 +52,15 @@ int main(int argc, char *argv[])
 
 	count = 1024;
 
-	switch (count)
+	while (count)
 	{
 		count = read(file_dir, buffer, 1024);
 
-		case count == -1:
+		if (count == -1)
 			checkfile(-1, 0, argv);
 		byte_written = write(file_dir, buffer, count);
 
-		case byte_written == -1:
+		if (byte_written == -1)
 			checkfile(0, -1, argv);
 
 	}
