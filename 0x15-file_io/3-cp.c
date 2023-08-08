@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * checkfile - checks for readability of a file.
  *
@@ -10,8 +11,6 @@
  */
 void checkfile(int file_from, int file_to, char *argv[])
 {
-	while (file_from && file_to)
-	{
 		if (file_from == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -23,7 +22,6 @@ void checkfile(int file_from, int file_to, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-	}
 
 }
 /**
