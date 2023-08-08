@@ -64,13 +64,13 @@ int main(int argc, char *argv[])
 	end_error = close(file_from);
 	if (end_error == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close file %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_from);
 		exit(100);
 	}
 	end_error = close(file_to);
 	if (end_error == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't be close file %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't be close fd %d\n", file_from);
 		exit(100);
 	}
 	return (0);
