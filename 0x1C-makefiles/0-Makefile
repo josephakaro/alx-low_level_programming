@@ -1,0 +1,15 @@
+# Requirements:
+#  Name : School
+#  Rules: All
+#  Build by: Rule
+#  Variables: None
+
+.PHONY = all
+
+all: school
+
+school:
+	gcc main.c school.c -o school
+
+clean:
+	rm -rf *.o
