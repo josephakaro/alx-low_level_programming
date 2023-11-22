@@ -1,0 +1,16 @@
+# Requirements:
+#	Name: school
+#	Rule: all
+#	Variables:
+#		CC  : The compiler to be used
+#		SRC : The .c files
+
+.PHONY = all
+
+CC = gcc
+SRC = $(wildcard main.c school.c)
+
+all: school
+
+school: 
+	$(CC) $(SRC) -o school
